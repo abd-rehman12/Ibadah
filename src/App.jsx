@@ -7,10 +7,9 @@ import TopNav from "./view/topNav";
 function App() {
   return (
     <>
-      <div className=" bg-[url('/assets/heroImg.png')] h-screen text-xl">    
+      <div className=" bg-[url('/assets/heroImg.png')] h-screen text-lg">    
         
-        {/* <TopNav /> */}
-        <LatLong/>
+        <TopNav />
         <NavBar />
         
       </div>
