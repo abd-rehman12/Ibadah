@@ -1,16 +1,17 @@
 import "./App.css";
 import LatLong from "./components/LatLong";
-import NavBar from "./view/navBar";
+import NavBar from "./view/NavBar";
+
 import TopNav from "./view/topNav";
 
 
 function App() {
   return (
     <>
-      <div className=" bg-[url('/assets/heroImg.png')] h-screen text-lg">    
+      <div className=" bg-[url('/assets/heroImg.png')]  h-screen text-lg font-DM Sans">    
         
         <TopNav />
-        <NavBar />
+        <NavBar/>
         
       </div>
       <LatLong/>

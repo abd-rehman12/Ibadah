@@ -11,6 +11,8 @@ function LatLong({ updateLocFromChild }) {
             lat: position.coords.latitude,
             long: position.coords.longitude,
           });
+          
+          
         },
         (err) => {
           console.error("Geolocation error:", err.message);
@@ -24,7 +26,6 @@ function LatLong({ updateLocFromChild }) {
   useEffect(() => {
     if (position.lat !== null && position.long !== null) {
       console.log("Position updated:", position);
-      // Ensure the function is a valid function before calling it
       if (typeof updateLocFromChild === 'function') {
         updateLocFromChild(position.lat, position.long);
       } else {
@@ -33,7 +34,7 @@ function LatLong({ updateLocFromChild }) {
     }
   }, [position, updateLocFromChild]);
 
-  return null; // Or return some UI if needed
+  return null; 
 }
 
 export default LatLong;
