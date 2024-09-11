@@ -51,7 +51,7 @@ function NavBar() {
           <span>+ (00) 123-345-11</span>
 
           <i
-            className="fa fa-search fa-md ml-10 border-l-2  "
+            className="fa fa-search fa-md ml-10 border-l-2 pl-2 "
             aria-hidden="true"
           ></i>
         </ul>
