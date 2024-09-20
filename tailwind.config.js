@@ -11,7 +11,7 @@ export default {
        blue:"#453F78",
        brown:"#795458",
        lightBrown:"#C08B5C",
-       yellow:"#FFC94A"
+       yellow:"#FBC50B"
      },
      spacing:{
       'topNavSpacing': '5.5 rem'

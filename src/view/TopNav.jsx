@@ -39,14 +39,16 @@ function TopNav() {
           );
           data = await res.json();
           console.log("address", data.display_name);
+         
+
           setAddress(
-            data.address.road +
-              "," +
-              data.address.neighbourhood +
-              "," +
-              data.address.district +
-              "," +
-              data.address.country
+              data.address.road +
+                "," +
+                data.address.neighbourhood +
+                "," +
+                data.address.district +
+                "," +
+                data.address.country
           );
         } catch (err) {
           console.error("Error fetching sunrise/sunset data:", err);
@@ -59,14 +61,15 @@ function TopNav() {
   return (
     <>
       <LatLong updateLocFromChild={updateLocFromChild} />
-      <div className="flex flex-wrap">
-        <div className="flex p-4 w-7/12 flex-wrap justify-between">
-          <div className="flex ml-8">
-            <div className="flex m-4">
+      <div className="flex  justify-evenly items-center ">
+        <div className="flex  w-7/12  justify-evenly  min-[320px]:max-sm:w-100%, text-lg, p-0">
+          <div className="flex items-center   min-[320px]:max-sm:ml-0">
+            <div className="flex m-4  min-[320px]:max-sm:m-0">
               <i
-                className="far fa-sun fa-lg text-yellow mt-3 mx-2"
+                className="far fa-sun fa-lg  text-yellow mt-3 mx-2 min-[320px]:max-sm:mt-0,mx-0"
                 aria-hidden="true"
               ></i>
+
               <h4 className="text-white">
                 Sunrise At:{" "}
                 <span className="font-bold">
@@ -79,7 +82,7 @@ function TopNav() {
               </h4>
             </div>
 
-            <div className="flex m-4">
+            <div className="flex m-4 min-[320px]:max-sm:m-0">
               <i
                 className="fas fa-moon fa-lg text-yellow mt-3 mx-2"
                 aria-hidden="true"
@@ -97,16 +100,15 @@ function TopNav() {
               </h4>
             </div>
           </div>
-          <div className="flex flex-wrap justify-between p-4">
+          <div className="flex md:flex-wrap justify-between  items-center  min-[320px]:max-sm:hidden ">
             <div>
-            <i
+              <i
                 className="fab fa-facebook-square px-4 fa-lg text-white"
                 aria-hidden="true"
               ></i>
-              
             </div>
             <div className="border-l-2">
-            <i
+              <i
                 className="fab fa-twitter-square px-4 fa-lg text-white"
                 aria-hidden="true"
               ></i>
@@ -119,16 +121,16 @@ function TopNav() {
             </div>
           </div>
         </div>
-        <div className="flex p-4 w-4/12  m-5 justify-start mr-topNavSpacing">
+        {/* marker */}
+        <div className="flex w-4/12   justify-start mr-topNavSpacing min-[320px]:max-sm:p-0">
           <i
-            className="fas fa-map-marker text-yellow mt-3 mx-2 fa-lg"
+            className="fas fa-map-marker  text-yellow mt-3 mx-2 fa-lg"
             aria-hidden="true"
           ></i>
-          <h4 className="text-white"> {address ? (
-                    address
-                  ) : (
-                    <span className="font-bold"> ... </span>
-                  )}</h4>
+          <h4 className="text-white">
+            {" "}
+            {address ? address : <span className="font-bold"> ... </span>}
+          </h4>
         </div>
       </div>
     </>
